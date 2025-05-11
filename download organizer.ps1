@@ -15,7 +15,6 @@ function order($extensions) {
     $archives = Get-ChildItem -File -Path "$env:USERPROFILE\Downloads"
 
     foreach ($key in $extensions.Keys) {
-        Write-Host -ForegroundColor Red "`nBuscando archivos de tipo: $key"
 
         $destinationPath = "$env:USERPROFILE\Downloads\$key"
         if (-not (Test-Path -Path $destinationPath)) {
